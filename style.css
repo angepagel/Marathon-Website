@@ -1,0 +1,169 @@
+
+/* Import de la police d'écriture Squarish */
+@font-face {
+    font-family: "Squarish";
+    src: url("data/polices/squarish.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    margin: 0;
+    background-image: url('data/general/body_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+}
+
+
+
+a {
+    color: #FF0000;
+}
+
+a:hover {
+    color: #0000FF;
+}
+
+a.menu {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+a.menu:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+a.menu:active {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+
+
+p {
+    font-family: "Courier New", Courier, mono;
+    font-size: 15px;
+    color: #00FF00;
+}
+
+
+
+ul {
+    list-style-type: square;
+}
+
+li.menu {
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+li.submenu {
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+/* Permet une numérotation 1.1, 1.2, etc des listes */
+
+ol.menu {
+    counter-reset: item;
+}
+
+ol.menu > li.menu, li.submenu {
+    counter-increment: item;
+}
+
+ol.menu ol.menu > li.menu, li.submenu {
+    display: block;
+}
+
+ol.menu ol.menu > li.menu:before, li.submenu:before {
+    content: counters(item, ".") ". ";
+    margin-left: -50px;
+}
+
+
+
+div.menu {
+    width: 334px;
+    height: 777px;
+    background-image: url('data/general/menu_bg.png');
+    background-repeat: no-repeat;
+    margin-top: 111px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: 2%;
+    position: fixed;
+}
+
+div.menu_interior {
+    padding-top: 48px;
+    padding-right: 7px;
+    padding-bottom: 24px;
+    padding-left: 41px;
+}
+
+div.menu_header {
+    text-align: center;
+    color: #00FF00;
+    font-size: 16px;
+}
+
+div.menu_title {
+    font-size: 24px;
+}
+
+div.menu_body {
+    font-family: "Courier New", Courier, mono;
+    font-size: 15px;
+    color: #00FF00;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+
+
+div.content {
+    width: 800px;
+    padding: 0;
+    background-image: url('data/general/content_bg.png');
+    min-height: 1200px;
+    margin-right: 3%;
+    margin-left: auto;
+}
+
+div.content_interior {
+    padding-top: 22px;
+    padding-right: 26px;
+    padding-bottom: 22px;
+    padding-left: 26px;
+}
+
+div.content_header {
+    font-family: "Squarish";
+    color: #00FF00;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-block;
+}
+
+div.content_limit {
+    color: #FF0000;
+    background-color: #600000;
+    padding: 2px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+div.content_body {
+    font-family: "Courier New", Courier, mono;
+    font-size: 14px;
+    color: #00FF00;
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
+}
